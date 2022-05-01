@@ -10,9 +10,15 @@ Final Project for Cloud Computing
 
 [Testing and Project Report](#testing-and-project-report)
 
-[Servers and security groups](#servers-and-security-groups)
+[How it all fits together](#how-it-all-fits-together)
 
-[Database and storage](#database-and-storage)
+[Code and Look](#code-and-look)
+
+[App UI](#app-ui)
+
+[Final Notes and Summary](#final-notes-and-summary)
+
+
 
 ### Using AI for good rather than Evil
 
@@ -113,6 +119,8 @@ This is the other side of the forecast type and time. Tracking the user’s next
 
 # How it all fits together
 
+[Top](#table-of-contents)
+
 This is the extremely hard part. Not just because I am a one-man team that had a bit of a hard semester about half way through, but because my basic assumption is that the pieces would either fit together (they do) but that the lowest level one would be the most likely to be plug and play. With the failure of photo recognition, I am forced to figure this out manually.
 Attempts to train the model caused this:
 
@@ -147,11 +155,15 @@ Here we import our photo dataset into Forecast. We would need an extremely high 
 Finally Personalize would track events which would do two things: seasonal purchases and suggestion of new items based on user trends. Personalize also runs on datasets which makes integration automated.
 
 
-## Code and Look
+# Code and Look
 
-The method used for this is JSON and CSV files. The image recognition can be trained which will give us data based on how sure something is and where it sits.
+[Top](#table-of-contents)
+
+The method used for this is JSON and CSV files. The image recognition can be trained which will give us data based on how sure something is and where it sits. Datasets unique to AWS are also created which is the method perferred. This allows real-time sharing accross my different plugins and the consumption and processing of information. 
 
 ## App UI
+
+[Top](#table-of-contents)
 
 ![image](https://user-images.githubusercontent.com/93015308/166165322-af8d7764-ef86-453c-85d5-f045b4675b80.png)
 
@@ -159,6 +171,10 @@ Here we have a prototype for the App screen. The real genius is the calendar mod
 
 # Final Notes and Summary
 
+[Top](#table-of-contents)
+
 Ultimately, I was unable to get the image recognition to work. This crippled everything else as it is the most basic building block of this project. The theory is sound, the only thing missing is a dataset to work through on the server side. I'm not an App developer in any sense of the word, but was able to mock up the screen above and add in everything it would need (minus a log in screen) I believe that the end state is highly obtainable, all that it needs is a properly trained dataset that can (with high precision) guess grocery items, and over time be trained to guess intervals of each stock item's lifespan. The app portion is quite simple and as such I may even be able to implement that.
 
 Most exciting to me was the ability to use the calender to add everything you would need by that date. I hate going grocery shopping, and being able to pull up a list and tell an AI to push out my request stock level a week or month, and never require me to build the list myself would be amazing.  While I did not succeed in bringing this to life, I had many things I loved that I also believe would be trivial to add, such as the mentioned future lists and even (hard) have it either buy and send items to the user, or almost as good, map out your grocrey store and use a greedy algorithm to chart a path to each item so I could spend the least amount of time in my Walmart. That would be absolutely amazing.
+
+
